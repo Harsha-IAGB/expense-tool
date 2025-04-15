@@ -1,20 +1,51 @@
-# Python
-__pycache__/
-*.py[cod]
+# Compiled output
+frontend/dist
+frontend/tmp
+frontend/out-tsc
+frontend/bazel-out
 
-# Virtual Environment
-.venv/
+# Custom
+receipts/
 
 # Django
 *.sqlite3
 *.log
 *.env
 
-# IDEs
+# IDEs and editors
 .idea/
-.vscode/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# OS
+# Miscellaneous
+frontend/.angular/cache/
+.sass-cache/
+frontend/connect.lock
+frontend/coverage
+frontend/libpeerconnection.log
+testem.log
+frontend/typings
+
+# Node
+frontend/node_modules
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+
+# System files
 .DS_Store
+Thumbs.db
 
-receipts/*
+# Virtual Environment
+.venv/
+
+# Visual Studio Code
+.vscode/
+.history/*
