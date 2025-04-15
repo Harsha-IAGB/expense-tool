@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -25,6 +25,8 @@ export class HomeComponent {
       receipt: [null, Validators.required]
     });
   }
+
+  @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
 
   onFileChange(event: any) {
     if (event.target.files.length > 0) {
@@ -54,6 +56,9 @@ export class HomeComponent {
           this.successMessage = 'Expense submitted successfully!';
           alert(this.successMessage);
           this.form.reset();
+          if (this.fileInput) {
+            this.fileInput.nativeElement.value = '';
+          }
         }
       });
   }
